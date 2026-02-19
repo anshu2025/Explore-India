@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore India | Premium Tourism</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Explore India</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SLIDER -->
+<section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Discover Incredible India</h1>
+        <p>Mountains • Beaches • Heritage • Adventure</p>
+        
+        <button onclick="goToPackages()">Explore Packages</button>
+    </div>
+</section>
+
+<!-- COUNTERS -->
+<section class="counter-section">
+    <div class="counter">
+        <h2 class="count" data-target="10000">0</h2>
+        <p>Happy Travelers</p>
+    </div>
+    <div class="counter">
+        <h2 class="count" data-target="250">0</h2>
+        <p>Destinations</p>
+    </div>
+    <div class="counter">
+        <h2 class="count" data-target="500">0</h2>
+        <p>Tours Completed</p>
+    </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations" class="section">
+    <h2>Top Destinations</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+            <h3>Goa</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <h3>Manali</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
+            <h3>Jaipur</h3>
+        </div>
+    </div>
+    <button onclick="goToPackages()">Explore Packages</button>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial" id="testimonial">
+        Amazing experience! Highly recommended.
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: info@exploreindia.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>© 2026 Explore India Tourism</p>
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919876543210" class="whatsapp" target="_blank">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>

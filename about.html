@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+     font-family: Times New Roman, Serif;
+  background:#f8fafc;
+  color:#1e293b;
+  transition:0.4s;
+  overflow-x:hidden;
+}
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00c6ff;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00c6ff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+}
+
+
+/* DARK MODE */
+body.dark {
+  background:#0f172a;
+  color:white;
+}
+
+/* Toggle Button */
+.toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#2563eb;
+  color:white;
+  padding:10px 15px;
+  border-radius:20px;
+  cursor:pointer;
+  z-index:1000;
+}
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+  top: 0;
+  left: 0;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeUp 1.5s ease;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Primary */
+.btn-primary {
+  background: #00c6ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0094cc;
+  transform: translateY(-3px);
+}
+
+/* Secondary */
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* PARTICLES */
+.particle{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:white;
+  border-radius:50%;
+  opacity:0.5;
+  animation:float 10s infinite linear;
+}
+
+@keyframes float{
+  from{transform:translateY(0);}
+  to{transform:translateY(-800px);}
+}
+
+/* SECTION */
+.section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:36px;
+  margin-bottom:20px;
+  color:#2563eb;
+}
+
+body.dark .section h2{color:#4facfe;}
+
+/* COUNTERS */
+.counters{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+
+.counter-box{
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  width:200px;
+  transition:0.3s;
+}
+
+body.dark .counter-box{
+  background:#1e293b;
+}
+
+.counter-box:hover{
+  transform:translateY(-10px);
+}
+
+.counter{
+  font-size:40px;
+  color:#2563eb;
+  font-weight:700;
+}
+
+/* DARK MODE */
+body.dark .features {
+  background: #111;
+}
+
+body.dark .feature-card {
+  background: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark .feature-card h3 {
+  color: #ffffff;
+}
+
+body.dark .feature-card p {
+  color: #cccccc;
+}
+
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:60px 10%;
+}
+
+.feature-card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.4s;
+  text-align:center;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+  background:#0d6efd;
+  color:white;
+}
+
+.feature-card h3{
+  margin-bottom:10px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:50px auto;
+}
+
+.timeline::after{
+  content:'';
+  position:absolute;
+  width:4px;
+  background:#4facfe;
+  top:0;
+  bottom:0;
+  left:50%;
+  margin-left:-2px;
+}
+
+.timeline-item{
+  padding:20px 40px;
+  position:relative;
+  width:50%;
+}
+
+.timeline-item.left{ left:0; }
+.timeline-item.right{ left:50%; }
+
+.timeline-item::after{
+  content:'';
+  position:absolute;
+  width:20px;
+  height:20px;
+  right:-10px;
+  background:#00f2fe;
+  border-radius:50%;
+  top:25px;
+}
+
+.timeline-item.right::after{
+  left:-10px;
+}
+
+
+/* MEET ME / TEAM SECTION */
+.meet-me {
+  padding: 80px 10%;
+  text-align: center;
+  background: #f8f9fa;
+}
+body.dark .meet-me{
+  background:#1e293b;
+}
+.meet-me h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #111827;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  padding:40px 30px 30px 30px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;   /* Crop center se hoga */
+  object-position: center top; /* Center image properly */
+  border-radius: 50%;
+  border: 4px solid #3b82f6;
+  margin: 0 auto 15px; /* Center image in card */
+  display: block;      /* Ensure centered */
+}
+
+.member h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.member p {
+  font-size: 16px;
+  color: #475569;
+}
+.member img:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
+/* DARK MODE SUPPORT */
+body.dark .member {
+  background: rgba(30,30,30,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark .member h3 {
+  color: #ffffff;
+}
+
+body.dark .member p {
+  color: #cccccc;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
+/* CTA */
+.cta{
+  padding:80px;
+  text-align:center;
+  background:linear-gradient(135deg,#2563eb,#1e3a8a);
+  color:white;
+}
+
+.cta button{
+  padding:15px 35px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#2563eb;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Animation */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    
+    <h2 class="logo">Explore India</h2>
+
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#destination">Destination</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       <li> <div class="toggle" onclick="toggleMode()">🌙 Toggle Mode</div></li>
+      </ul>
+    </nav>
+
+  </div>
+ 
+</header>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Explore The World With Us</h1>
+        <p>Smart Tourism Platform for Modern Travelers</p>
+        <div class="hero-buttons">
+            <a href="packages.html" class="btn-primary">Explore Packages</a>
+            
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>Who We Are</h2>
+  <p> DISCOVER DESTINATION is a smart tourism management website designed to provide
+    convenient tour packages, hotel bookings, train, bus and cab reservations.
+    Our system ensures fast processing, high security, accuracy, and reliable
+    customer service. We aim to build strong relationships with our customers
+    so they can enjoy the holiday of their dreams.</p>
+
+  <div class="counters">
+    <div class="counter-box">
+      <div class="counter" data-target="500">0</div>
+      <p>Happy Customers</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="120">0</div>
+      <p>Tour Packages</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter" data-target="50">0</div>
+      <p>Destinations</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature-card">
+    <h3>⚡ Fast Processing</h3>
+    <p>Immediate results with secure booking system.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📊 Data Management</h3>
+    <p>Tracks all customer and tour information efficiently.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>🌍 Smart Search</h3>
+    <p>Find tour destinations according to your preferences.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>💬 Feedback System</h3>
+    <p>Tourists can share their valuable experiences.</p>
+  </div>
+</section>
+<!-- TIMELINE -->
+<section class="section">
+  <h2>Our Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <h3>2024</h3>
+      <p>Idea & Research Started</p>
+    </div>
+    <div class="timeline-item right">
+      <h3>2025</h3>
+      <p>Website Development & Testing</p>
+    </div>
+    <div class="timeline-item left">
+      <h3>2026</h3>
+      <p>Launch & Customer Growth</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section class="section meet-me">
+  <h2>Meet Me</h2>
+  <div class="team-container">
+    <div class="member">
+      <img src="Anshu.png" alt="Utkarsh Pateriya">
+      <h3>Utkarsh Pateriya</h3>
+      <p>Founder & Developer</p>
+    </div>
+  </div>
+</section>
+      <section class="cta" id="contact">
+        <div class="container">
+
+          <div class="cta-content">
+            <p class="section-subtitle">Call To Action</p>
+
+            <h2 class="h2 section-title">Ready For Unforgatable Travel. Remember Us!</h2>
+
+            <p class="section-text">
+              Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque
+              laudantium. Sit ornare
+              mollitia tenetur, aptent.
+            </p>
+          </div>
+
+          <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Contact Us !</button>
+
+        </div>
+      </section>
+
+      
+
+    </article>
+  </main>
+  <!-- 
+    - custom js link
+  -->
+  
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+<script>
+
+/* DARK MODE */
+
+
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+
+/* COUNTER ANIMATION */
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+  counter.innerText='0';
+  const update=()=>{
+    const target=+counter.getAttribute('data-target');
+    const c=+counter.innerText;
+    const inc=target/100;
+    if(c<target){
+      counter.innerText=Math.ceil(c+inc);
+      setTimeout(update,20);
+    }else{
+      counter.innerText=target+"+";
+    }
+  };
+  update();
+});
+
+/* TESTIMONIAL SLIDER */
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 4000);
+</script>
+
+</body>
+</html>
