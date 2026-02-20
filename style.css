@@ -225,7 +225,28 @@ color:white;
 text-align:center;
 padding:40px;
 }
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
 
+.whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:768px){
@@ -307,3 +328,4 @@ transition:0.3s;
 background:#2563eb;
 transform:scale(1.05);
 }
+
