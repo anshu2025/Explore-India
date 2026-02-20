@@ -95,8 +95,18 @@
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<script src="script.js"></script>
+<script src="script.js">
+    <script>
+const toggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+toggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+</script>
+</script>
 </body>
 </html>
+
 
 
