@@ -12,26 +12,22 @@ color:#1e293b;
 }
 
 /* ===== NAVBAR ===== */
-
-header{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-color:white;
-z-index:1000;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #0d1b2a;
+    color: white;
+    position: relative;
+    z-index: 1000;
 }
+
 .logo {
     font-size: 22px;
     font-weight: bold;
 }
 
-/* Navbar Links */
 nav {
     display: flex;
     gap: 25px;
@@ -48,25 +44,26 @@ nav a:hover {
     color: #fca311;
 }
 
-/* Hamburger Button */
 .menu-toggle {
     display: none;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-/* 🔥 Mobile Responsive */
+/* 🔥 Mobile Fix */
 @media (max-width: 768px) {
 
     nav {
         position: absolute;
-        top: 70px;
+        top: 60px;
         right: 0;
         background: #0d1b2a;
         flex-direction: column;
-        width: 200px;
+        width: 220px;
         padding: 20px;
         display: none;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
     nav.active {
@@ -362,5 +359,6 @@ transition:0.3s;
 background:#2563eb;
 transform:scale(1.05);
 }
+
 
 
